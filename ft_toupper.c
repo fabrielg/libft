@@ -6,11 +6,11 @@
 /*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 01:02:57 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/14 01:07:11 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/14 01:08:45 by Fabrielg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')
 		c -= 32;

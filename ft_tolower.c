@@ -6,11 +6,11 @@
 /*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 01:05:43 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/14 01:07:12 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/14 01:08:45 by Fabrielg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		c += 32;
