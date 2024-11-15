@@ -6,7 +6,7 @@
 /*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 01:08:18 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/14 01:41:02 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/15 19:12:59 by Fabrielg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (s + i);
+			return ((char *)s + i);
 		i++;
 	}
 	return (0);
