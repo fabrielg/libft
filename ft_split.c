@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:51:08 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 10:48:54 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:12:42 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s);
 
-size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	size_t	words;
 	int		is_word;
@@ -35,7 +35,7 @@ size_t	count_words(const char *s, char c)
 	return (words);
 }
 
-char	*ft_strndup(const char *s, size_t start, size_t end)
+static char	*ft_strndup(const char *s, size_t start, size_t end)
 {
 	char	*dup;
 	size_t	i;
