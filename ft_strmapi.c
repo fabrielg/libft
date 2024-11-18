@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:12:43 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 12:30:49 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 12:53:40 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
@@ -32,7 +34,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = 0;
 	return (str);
 }
-
+/*
 char	add_x_char(unsigned int add, char c)
 {
 	while ((c + add) >= 126 && add > 0)
@@ -41,7 +43,7 @@ char	add_x_char(unsigned int add, char c)
 		return (126);
 	return (c + add);
 }
-/*
+
 int	main(void)
 {
 	char	*str = ft_strmapi("AAAAAAAAAAAAAAAAAAAAAAAAAA", add_x_char);
