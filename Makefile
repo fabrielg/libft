@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2024/11/18 14:58:58 by gfrancoi         ###   ########.fr        #
+#    Updated: 2024/11/18 15:36:05 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar r $(NAME) $@ $?
 
-$(OBJS): $(SRCS)
+%.o: %.c
 	$(CC) $(CFLAGS) $(OPTION) $?
 
 clean:
