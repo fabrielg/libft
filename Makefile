@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2024/11/18 14:32:27 by gfrancoi         ###   ########.fr        #
+#    Updated: 2024/11/18 14:58:58 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,13 +54,10 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-SDIR = ./
-SRC = $(addprefix $(SDIR), $(SRCS))
-
 $(NAME): $(OBJS)
-	ar rc $(NAME) $@ $?
+	ar r $(NAME) $@ $?
 
-%.o: %.c
+$(OBJS): $(SRCS)
 	$(CC) $(CFLAGS) $(OPTION) $?
 
 clean:
@@ -72,4 +69,3 @@ fclean: clean
 re: fclean all
 
 .PHONY = all clean fclean re
-
