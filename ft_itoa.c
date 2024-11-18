@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:50:15 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 13:12:15 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 14:35:24 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char	*ft_itoa(int n)
 	result = malloc(sizeof(char) * (digits + 1));
 	if (!result)
 		return (NULL);
+	i = 0;
 	if (nbr < 0)
 	{
 		result[0] = '-';
