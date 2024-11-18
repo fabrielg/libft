@@ -6,13 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 02:09:33 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/14 16:33:09 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:59:13 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

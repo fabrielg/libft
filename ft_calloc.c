@@ -6,12 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:59:20 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/14 17:19:09 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:56:31 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
 

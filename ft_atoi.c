@@ -6,14 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:34:51 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/14 16:57:16 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:56:33 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int		ft_isdigit(int c);
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,11 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:28:56 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/13 18:06:41 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:57:33 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

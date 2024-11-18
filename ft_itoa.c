@@ -6,11 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:50:15 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 14:35:24 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:57:15 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	nb_digit(long int n)
 {

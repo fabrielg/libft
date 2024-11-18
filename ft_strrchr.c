@@ -6,13 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 01:22:54 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/18 14:33:28 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:59:25 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,12 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:03:19 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 13:08:06 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:58:22 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

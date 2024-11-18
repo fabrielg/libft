@@ -6,13 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:51:08 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 13:12:42 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:58:33 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 static size_t	count_words(const char *s, char c)
 {

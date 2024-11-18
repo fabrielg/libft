@@ -6,12 +6,11 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:15:13 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/14 17:26:01 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:58:46 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s);
 

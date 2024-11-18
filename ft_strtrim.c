@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:21:38 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/15 19:13:16 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:59:30 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
