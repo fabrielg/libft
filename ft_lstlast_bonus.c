@@ -6,13 +6,13 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:38:24 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 16:40:02 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:44:01 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)
 		ft_lstlast(lst->next);
