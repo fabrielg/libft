@@ -3,23 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:30:38 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 16:36:54 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/19 00:12:04 by Fabrielg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	lst_size_recursive(t_list *lst, int count)
-{
-	if (lst)
-		lst_size_recursive(lst->next, count + 1);
-	return (count);
-}
-
 int	ft_lstsize(t_list *lst)
 {
-	return (lst_size_recursive(lst, 0));
+	size_t	count;
+	t_list	*node;
+
+	count = 0;
+	node = lst;
+	while (node)
+	{
+		node = node->next;
+		count++;
+	}
+	return (count);
 }
