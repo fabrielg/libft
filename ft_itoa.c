@@ -6,7 +6,7 @@
 /*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:50:15 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 21:32:56 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/18 23:53:31 by Fabrielg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,25 @@ char	*ft_itoa(int n)
 	char		*result;
 	long int	nbr;
 	int			digits;
-	int			i;
 
 	nbr = n;
 	digits = nb_digit(nbr);
-	if (nbr < 0)
+	if (n < 0)
+	{
+		nbr *= -1;
 		digits++;
+	}
 	result = ft_calloc((digits + 1), sizeof(char));
 	if (!result)
 		return (NULL);
-	i = 0;
-	if (nbr < 0)
-	{
-		result[0] = '-';
-		i = 1;
-		nbr *= -1;
-	}
-	while (--digits > i)
+	result[digits] = 0;
+	while (digits--)
 	{
 		result[digits] = (nbr % 10) + '0';
 		nbr /= 10;
 	}
+	if (n < 0)
+		result[0] = '-';
 	return (result);
 }
 /*
