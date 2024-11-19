@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:51:08 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 15:58:33 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:11:27 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,33 +80,3 @@ char	**ft_split(char const *s, char c)
 	split[index[1]] = 0;
 	return (split);
 }
-/*
-#include <stdio.h>
-int     main(int ac, char **av)
-{
-	if (ac == 3 && av[2][0])
-	{
-		char	**split = ft_split(av[1], av[2][0]);
-		int		i = 0;
-		while (split[i])
-		{
-			printf("%s\n", split[i++]);
-		}
-	}
-	else
-	{
-		char	**split = ft_split(NULL, ' ');
-		if (!split)
-		{
-			printf("VALEUR NULL");
-			return (1);
-		}
-		int		i = 0;
-		while (split[i])
-		{
-			printf("%s\n", split[i++]);
-		}
-	}
-	return (0);
-}
-*/

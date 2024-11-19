@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:50:15 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 23:53:31 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:50:15 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,3 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 	return (result);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*s = ft_itoa(-2147483648);
-	if (s)
-	{
-		printf("%s\n", s);
-		free(s);
-	}
-	else
-		printf("NULL VALUE\n");
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:21:38 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 15:59:30 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:34:25 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim[i] = 0;
 	return (trim);
 }
-/*
-int	main(void)
-{
-	const char	*s1 = "  		  Je suis     un	test		  	  	";
-	const char	*set = " \t";
-	char	*trim = ft_strtrim(s1, set);
-	printf("%s.\n", trim);
-	free(trim);
-	return (0);
-}
-*/

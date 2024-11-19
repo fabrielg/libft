@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 01:46:25 by Fabrielg          #+#    #+#             */
-/*   Updated: 2024/11/18 15:57:28 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/14 01:46:25 by gfrancoi          #+#    #+#             */
+/*   Updated: 2024/11/19 11:53:49 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return ((void *)0);
 }
-/*
-#include <string.h>
-int	main(void)
-{
-	char	*s = "Bonjour";
-	printf("%d, %s\n", memchr(s, 'j', 7), memchr(s, 'j', 7));
-	printf("%d, %s\n", ft_memchr(s, 'j', 7), ft_memchr(s, 'j', 7));
-	return (0);
-}
-*/

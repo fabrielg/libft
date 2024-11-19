@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:34:51 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 23:31:45 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:38:05 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * result);
 }
-/*
-#include <stdlib.h>
-int	main(int argc, char *argv[])
-{
-	if (argc == 2)
-	{
-		printf("%d\n", atoi(argv[1]));
-		printf("%d\n", ft_atoi(argv[1]));
-	}
-	return (0);
-}
-*/

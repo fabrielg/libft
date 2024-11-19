@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Fabrielg <Fabrielg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:15:13 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 21:45:59 by Fabrielg         ###   ########.fr       */
+/*   Updated: 2024/11/19 12:17:11 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,3 @@ char	*ft_strdup(const char *s)
 	dup[i] = 0;
 	return (dup);
 }
-/*
-#include <string.h>
-int	main(int argc, char *argv[])
-{
-	if (argc <= 1)
-	{
-		char	*ref = "Je vais avoir 125 au projet (:";
-		char	*dup = strdup(ref);
-		char	*ft_dup = strdup(ref);
-		printf("%s\n", dup);
-		printf("%s\n", ft_dup);
-		free(dup);
-		free(ft_dup);
-	}
-	else
-	{
-		char	*dup = strdup(argv[1]);
-		char	*ft_dup = strdup(argv[1]);
-		printf("%s\n", dup);
-		printf("%s\n", ft_dup);
-		free(dup);
-		free(ft_dup);
-	}
-	return (0);
-}
-*/
