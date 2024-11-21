@@ -6,15 +6,15 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:51:08 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/19 12:11:27 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2024/11/22 00:01:57 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
-	size_t	words;
+	int		words;
 	int		is_word;
 
 	words = 0;
@@ -33,50 +33,51 @@ static size_t	count_words(const char *s, char c)
 	return (words);
 }
 
-static char	*ft_strndup(const char *s, size_t start, size_t end)
+static int	word_len(char const *s, char c)
 {
-	char	*dup;
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static void	free_split(char **split)
+{
 	size_t	i;
 
-	dup = malloc(sizeof(char) * (end - start + 1));
-	if (!dup)
-		return (NULL);
 	i = 0;
-	while (start < end)
-	{
-		dup[i] = s[start];
-		i++;
-		start++;
-	}
-	dup[i] = 0;
-	return (dup);
+	while (split[i])
+		free(split[i++]);
+	free(split);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**split;
-	size_t	index[2];
-	int		start;
+	char		**split;
+	int			words;
+	int			len;
+	int			i;
 
-	if (!s)
-		return (NULL);
-	split = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	words = count_words(s, c);
+	split = malloc(sizeof(char *) * (words + 1));
 	if (!split)
-		return (NULL);
-	index[0] = 0;
-	index[1] = 0;
-	start = -1;
-	while (index[0] <= ft_strlen(s))
+		return (0);
+	i = -1;
+	while (++i < words)
 	{
-		if (s[index[0]] != c && start == -1)
-			start = index[0];
-		else if ((s[index[0]] == c || ft_strlen(s) == index[0]) && start != -1)
+		while (*s == c)
+			s++;
+		len = word_len(s, c);
+		split[i] = ft_substr(s, 0, len);
+		if (!split[i])
 		{
-			split[index[1]++] = ft_strndup(s, start, index[0]);
-			start = -1;
+			free_split(split);
+			return (0);
 		}
-		index[0]++;
+		s += len;
 	}
-	split[index[1]] = 0;
+	split[words] = NULL;
 	return (split);
 }
