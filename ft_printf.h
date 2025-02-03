@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 16:34:45 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:32:58 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/03 17:34:24 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,13 @@
 
 # include <stdarg.h>
 # include "strbuilder.h"
+# include "macro.h"
 
 # define PREFIX		0b00001 // #
 # define ZERO_PAD	0b00010 // 0
 # define LEFT_ALIGN	0b00100 // -
 # define SPACE		0b01000 // ' '
 # define SIGNED		0b10000 // +
-
-typedef unsigned long UL;
-typedef unsigned int UI;
 
 typedef struct s_specifier
 {

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nb_digits.c                                     :+:      :+:    :+:   */
+/*   macro.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 16:34:20 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:11:35 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 17:32:25 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 17:42:42 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MACRO_H
+# define MACRO_H
 
-int	ft_nb_digits(int n)
-{
-	int	result;
+# ifndef UL
+#  define UL unsigned long
+# endif
 
-	if (n == -2147483648)
-		return (10);
-	if (n < 0)
-		n *= -1;
-	result = 1;
-	while (n >= 10)
-	{
-		n /= 10;
-		result++;
-	}
-	return (result);
-}
+# ifndef UI
+#  define UI unsigned int
+# endif
+
+#endif
