@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/02/03 16:34:42 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/02/03 16:55:59 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRCS = \
 	char/ft_isprint.c\
 	char/ft_tolower.c\
 	char/ft_toupper.c\
+	gnl/get_next_line_utils.c\
+	gnl/get_next_line.c\
 	lst/ft_lstnew.c\
 	lst/ft_lstadd_front.c\
 	lst/ft_lstsize.c\
@@ -54,6 +56,7 @@ SRCS = \
 	str/ft_strjoin.c\
 	str/ft_strlcat.c\
 	str/ft_strlcpy.c\
+	str/ft_strlen_char.c\
 	str/ft_strlen.c\
 	str/ft_strmapi.c\
 	str/ft_strncmp.c\
