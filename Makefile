@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/02/03 16:15:36 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/02/03 16:34:42 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,13 @@ SRCS = \
 	mem/ft_memset.c\
 	nbr/ft_atoi.c\
 	nbr/ft_itoa.c\
+	nbr/ft_nb_digits.c\
+	printf/add_char.c\
+	printf/add_nbr.c\
+	printf/add_str.c\
+	printf/add_unsigned.c\
+	printf/ft_printf.c\
+	printf/parsing.c\
 	str/ft_split.c\
 	str/ft_strchr.c\
 	str/ft_strdup.c\

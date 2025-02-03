@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:02:04 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/03 16:26:48 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 
 # include "char.h"
+# include "ft_printf.h"
 # include "lst.h"
 # include "mem.h"
 # include "nbr.h"
