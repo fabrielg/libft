@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:39:52 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 16:20:06 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 13:00:01 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 16:13:15 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_putstr_fd(char *str, int fd)
 {
-	t_list	*element;
+	return (write(fd, str, ft_strlen(str)));
+}
 
-	element = malloc(sizeof(t_list));
-	if (!element)
-		return (NULL);
-	element->content = content;
-	element->next = NULL;
-	return (element);
+int	ft_putstrn_fd(char *str, int n, int fd)
+{
+	return (write(fd, str, n));
 }

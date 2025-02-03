@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 17:42:03 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/19 11:53:49 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 13:01:43 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 16:16:22 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_putendl_fd(char *s, int fd)
 {
-	t_list	*node;
+	int	result;
 
-	if (lst)
-	{
-		if (!(*lst))
-			*lst = new;
-		else
-		{
-			node = ft_lstlast(*(lst));
-			node->next = new;
-		}
-	}
+	result = ft_putstr_fd(s, fd);
+	result += ft_putchar_fd('\n', fd);
+	return (result);
 }

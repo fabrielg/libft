@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   nbr.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 16:21:13 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 16:31:33 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 15:56:48 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef NBR_H
+# define NBR_H
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	new->next = *lst;
-	*lst = new;
-}
+int		ft_atoi(const char *nptr);
+char	*ft_itoa(int n);
+
+#endif
