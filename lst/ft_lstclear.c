@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:33:02 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 18:00:57 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 15:17:34 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*node;
 
-# include "char.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
-
-#endif
+	while (*lst)
+	{
+		node = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = node;
+	}
+	*lst = NULL;
+}

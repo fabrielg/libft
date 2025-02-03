@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:01:43 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 15:58:19 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 17:42:03 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 15:17:29 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	t_list	*node;
+
+	if (lst)
+	{
+		if (!(*lst))
+			*lst = new;
+		else
+		{
+			node = ft_lstlast(*(lst));
+			node->next = new;
+		}
+	}
 }

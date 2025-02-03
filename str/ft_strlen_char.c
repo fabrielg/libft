@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:33:02 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 16:55:23 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 17:11:29 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+size_t	ft_strlen_char(char const *str, char stop)
+{
+	size_t	i;
 
-# include "char.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
-
-#endif
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i] && str[i] != stop)
+		i++;
+	return (i);
+}

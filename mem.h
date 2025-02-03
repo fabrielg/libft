@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   mem.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:33:02 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 15:53:11 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 15:55:39 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef MEM_H
+# define MEM_H
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+# include <stddef.h>
 
-# include "char.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
+void	ft_bzero(void *dst, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_memchr(const void *str, int c, size_t n);
+int		ft_memcmp(const void *p1, const void *p2, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memset(void *dst, int c, size_t n);
 
 #endif

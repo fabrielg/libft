@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   macro.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 18:00:57 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/19 11:53:49 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 17:32:25 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 17:42:42 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MACRO_H
+# define MACRO_H
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
-{
-	t_list	*node;
+# ifndef UL
+#  define UL unsigned long
+# endif
 
-	while (*lst)
-	{
-		node = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = node;
-	}
-	*lst = NULL;
-}
+# ifndef UI
+#  define UI unsigned int
+# endif
+
+#endif

@@ -6,81 +6,90 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2024/11/19 11:53:49 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/02/03 16:55:59 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-OPTION = -c
 NAME = libft.a
 
-SRCS = ft_isalpha.c\
-	ft_isdigit.c\
-	ft_isalnum.c\
-	ft_isascii.c\
-	ft_isprint.c\
-	ft_strlen.c\
-	ft_memset.c\
-	ft_bzero.c\
-	ft_memcpy.c\
-	ft_memmove.c\
-	ft_strlcpy.c\
-	ft_strlcat.c\
-	ft_toupper.c\
-	ft_tolower.c\
-	ft_strchr.c\
-	ft_strrchr.c\
-	ft_strncmp.c\
-	ft_memchr.c\
-	ft_memcmp.c\
-	ft_strnstr.c\
-	ft_atoi.c\
-	ft_calloc.c\
-	ft_strdup.c\
-	ft_substr.c\
-	ft_strjoin.c\
-	ft_strtrim.c\
-	ft_split.c\
-	ft_itoa.c\
-	ft_strmapi.c\
-	ft_striteri.c\
-	ft_putchar_fd.c\
-	ft_putstr_fd.c\
-	ft_putendl_fd.c\
-	ft_putnbr_fd.c
+SRCS = \
+	char/ft_isalnum.c\
+	char/ft_isalpha.c\
+	char/ft_isascii.c\
+	char/ft_isdigit.c\
+	char/ft_isprint.c\
+	char/ft_tolower.c\
+	char/ft_toupper.c\
+	gnl/get_next_line_utils.c\
+	gnl/get_next_line.c\
+	lst/ft_lstnew.c\
+	lst/ft_lstadd_front.c\
+	lst/ft_lstsize.c\
+	lst/ft_lstlast.c\
+	lst/ft_lstadd_back.c\
+	lst/ft_lstdelone.c\
+	lst/ft_lstclear.c\
+	lst/ft_lstiter.c\
+	lst/ft_lstmap.c\
+	mem/ft_bzero.c\
+	mem/ft_calloc.c\
+	mem/ft_memchr.c\
+	mem/ft_memcmp.c\
+	mem/ft_memcpy.c\
+	mem/ft_memmove.c\
+	mem/ft_memset.c\
+	nbr/ft_atoi.c\
+	nbr/ft_itoa.c\
+	nbr/ft_nb_digits.c\
+	printf/add_char.c\
+	printf/add_nbr.c\
+	printf/add_str.c\
+	printf/add_unsigned.c\
+	printf/ft_printf.c\
+	printf/parsing.c\
+	str/ft_split.c\
+	str/ft_strchr.c\
+	str/ft_strdup.c\
+	str/ft_striteri.c\
+	str/ft_strjoin.c\
+	str/ft_strlcat.c\
+	str/ft_strlcpy.c\
+	str/ft_strlen_char.c\
+	str/ft_strlen.c\
+	str/ft_strmapi.c\
+	str/ft_strncmp.c\
+	str/ft_strnstr.c\
+	str/ft_strrchr.c\
+	str/ft_strtrim.c\
+	str/ft_substr.c\
+	strbuilder/ft_strbuilder_utils.c\
+	strbuilder/ft_strbuilder.c\
+	write/ft_putchar_fd.c\
+	write/ft_putendl_fd.c\
+	write/ft_putnbr_fd.c\
+	write/ft_putstr_fd.c
 
-OBJS = $(SRCS:.c=.o)
+OBJ_DIR = obj
 
-SRCS_BONUS = ft_lstnew_bonus.c\
-	ft_lstadd_front_bonus.c\
-	ft_lstsize_bonus.c\
-	ft_lstlast_bonus.c\
-	ft_lstadd_back_bonus.c\
-	ft_lstdelone_bonus.c\
-	ft_lstclear_bonus.c\
-	ft_lstiter_bonus.c\
-	ft_lstmap_bonus.c
-
-OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+OBJS = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(basename $(SRCS))))
 
 all: $(NAME)
 
+$(OBJ_DIR)/%.o: %.c
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -o $@ -c $< -I.
+
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $@ $?
-
-bonus: $(OBJS_BONUS)
-	ar rcs $(NAME) $?
-
-%.o: %.c
-	$(CC) $(CFLAGS) $(OPTION) $?
+	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -fr $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	rm $(NAME)
 
 re: fclean all
 
-.PHONY = all clean fclean re bonus
+.PHONY = all clean fclean re

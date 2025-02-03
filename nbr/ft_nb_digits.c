@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_nb_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:00:01 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/18 15:58:25 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 16:34:20 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 17:11:35 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_nb_digits(int n)
 {
-	int	i;
+	int	result;
 
-	i = 0;
-	while (s[i])
-		ft_putchar_fd(s[i++], fd);
+	if (n == -2147483648)
+		return (10);
+	if (n < 0)
+		n *= -1;
+	result = 1;
+	while (n >= 10)
+	{
+		n /= 10;
+		result++;
+	}
+	return (result);
 }

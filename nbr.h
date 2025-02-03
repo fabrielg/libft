@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*   nbr.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 17:42:03 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/19 11:53:49 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/02/03 16:34:58 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef NBR_H
+# define NBR_H
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*node;
+int		ft_atoi(const char *nptr);
+char	*ft_itoa(int n);
+int		ft_nb_digits(int n);
 
-	if (lst)
-	{
-		if (!(*lst))
-			*lst = new;
-		else
-		{
-			node = ft_lstlast(*(lst));
-			node->next = new;
-		}
-	}
-}
+#endif
