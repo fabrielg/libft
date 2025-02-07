@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 16:34:45 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:34:24 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/07 18:01:25 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ void	ft_add_str(t_strbuilder *build, t_conversion conv, char *s);
 
 void	ft_add_nbr(t_strbuilder *build, t_conversion conv, int n);
 
-void	ft_add_unsigned(t_strbuilder *build, t_conversion conv, UL n, UI i);
+void	ft_add_unsigned(t_strbuilder *build, t_conversion conv, t_ul n, t_ui i);
 
-void	ft_add_pointer(t_strbuilder *build, t_conversion conv, UL address);
+void	ft_add_pointer(t_strbuilder *build, t_conversion conv, t_ul address);
 
 #endif

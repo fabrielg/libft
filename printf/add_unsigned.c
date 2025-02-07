@@ -6,36 +6,36 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 16:36:54 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:27:10 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/07 18:02:06 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_add_int_base_rec(t_strbuilder *sb, UL n, t_base *base)
+static void	ft_add_int_base_rec(t_strbuilder *sb, t_ul n, t_base *base)
 {
 	if (n >= base->size)
 		ft_add_int_base_rec(sb, n / base->size, base);
 	ft_sb_add_char(sb, base->digits[n % base->size]);
 }
 
-static void	ft_add_int_base(t_strbuilder *sb, UL n, int precision, t_base *base)
+static void	ft_add_int_base(t_strbuilder *sb, t_ul n, int prec, t_base *base)
 {
 	t_strbuilder	*temp;
 	int				size;
 
-	if (!n && !precision)
+	if (!n && !prec)
 		return ;
 	temp = ft_sb_new();
 	ft_add_int_base_rec(temp, n, base);
 	size = ft_sb_size(temp);
 	ft_sb_clear(&temp);
-	if (precision >= 0 && precision > size)
-		ft_sb_add_nchar(sb, '0', precision - size);
+	if (prec >= 0 && prec > size)
+		ft_sb_add_nchar(sb, '0', prec - size);
 	ft_add_int_base_rec(sb, n, base);
 }
 
-static int	ft_nb_digits_formatted(t_conversion conv, UL n, t_base base)
+static int	ft_nb_digits_formatted(t_conversion conv, t_ul n, t_base base)
 {
 	int				result;
 	t_strbuilder	*temp;
@@ -51,7 +51,7 @@ static int	ft_nb_digits_formatted(t_conversion conv, UL n, t_base base)
 	return (result);
 }
 
-void	ft_add_unsigned(t_strbuilder *build, t_conversion conv, UL n, UI i)
+void	ft_add_unsigned(t_strbuilder *build, t_conversion conv, t_ul n, t_ui i)
 {
 	static t_base	bases[] = {
 	{"0123456789", 10, ""},
@@ -77,7 +77,7 @@ void	ft_add_unsigned(t_strbuilder *build, t_conversion conv, UL n, UI i)
 		ft_sb_add_nchar(build, ' ', conv.field_width - digits);
 }
 
-void	ft_add_pointer(t_strbuilder *build, t_conversion conv, UL address)
+void	ft_add_pointer(t_strbuilder *build, t_conversion conv, t_ul address)
 {
 	if (address)
 	{
