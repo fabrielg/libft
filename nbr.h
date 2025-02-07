@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:34:58 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/07 17:57:34 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define NBR_H
 
 int		ft_atoi(const char *nptr);
+int		ft_atoi_strict(const char *nptr, int *dest);
 char	*ft_itoa(int n);
 int		ft_nb_digits(int n);
 
