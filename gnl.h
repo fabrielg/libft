@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:54:58 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:59:06 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/23 15:45:18 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
+
+# define GNL_FD_SIZE 1024
 
 # include <unistd.h>
 # include <stdlib.h>

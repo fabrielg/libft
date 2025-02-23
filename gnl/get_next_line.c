@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 01:54:41 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 17:03:56 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/23 15:48:44 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,33 @@ void	read_file(int fd, char **buffer)
 	free(content);
 }
 
+static void	gnl_clear(char **buffer)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < GNL_FD_SIZE)
+	{
+		if (buffer[i])
+			free(buffer[i]);
+		buffer[i] = NULL;
+		i++;
+	}
+}
+
 char	*get_next_line(int fd)
 {
-	static char	*buffer[1024];
+	static char	*buffer[GNL_FD_SIZE];
 	char		*line;
 
-	if (read(fd, 0, 0) < 0)
+	if (fd == -42 || read(fd, 0, 0) < 0)
 	{
-		if (fd < 0 || fd > 1024)
+		if (fd == -42)
+		{
+			gnl_clear(buffer);
+			return (NULL);
+		}
+		if ((fd < 0 || fd > GNL_FD_SIZE))
 			return (NULL);
 		if (buffer[fd])
 			free(buffer[fd]);
