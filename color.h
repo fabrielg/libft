@@ -6,35 +6,35 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 21:13:23 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/24 21:17:54 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/24 21:27:24 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLOR_H
 # define COLOR_H
 
-# define RESET 0
+# define RESET "\e[0m"
 
-# define BLACK 30
-# define RED 31
-# define GREEN 32
-# define YELLOW 33
-# define BLUE 34
-# define MAGENTA 35
-# define CYAN 36
-# define WHITE 37
-# define DEFAULT 39
+# define BLACK "\e[0;30m"
+# define RED "\e[0;31m"
+# define GREEN "\e[0;32m"
+# define YELLOW "\e[0;33m"
+# define BLUE "\e[0;34m"
+# define MAGENTA "\e[0;35m"
+# define CYAN "\e[0;36m"
+# define WHITE "\e[0;37m"
+# define DEFAULT "\e[0;39m"
 
-# define BLACK_B 40
-# define RED_B 41
-# define GREEN_B 42
-# define YELLOW_B 43
-# define BLUE_B 44
-# define MAGENTA_B 45
-# define CYAN_B 46
-# define WHITE_B 47
-# define DEFAULT_B 49
+# define BLACK_B "\e[1;30m"
+# define RED_B "\e[1;31m"
+# define GREEN_B "\e[1;32m"
+# define YELLOW_B "\e[1;33m"
+# define BLUE_B "\e[1;34m"
+# define MAGENTA_B "\e[1;35m"
+# define CYAN_B "\e[1;36m"
+# define WHITE_B "\e[1;37m"
+# define DEFAULT_B "\e[1;39m"
 
-void	write_color(char *str, int color);
+void	write_color(char *str, char *color);
 
 #endif
