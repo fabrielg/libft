@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 15:59:41 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:01:12 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/26 15:05:30 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_strbuilder
 
 t_strbuilder	*ft_sb_new(void);
 t_strbuilder	*ft_sb_last(t_strbuilder *sb);
+char			*ft_sb_build(t_strbuilder *sb);
 void			ft_sb_append(t_strbuilder *sb, char *content, int size);
 void			ft_sb_add_char(t_strbuilder *sb, char content);
 void			ft_sb_add_nchar(t_strbuilder *sb, char content, size_t nb);

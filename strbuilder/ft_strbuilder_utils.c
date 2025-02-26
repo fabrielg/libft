@@ -6,17 +6,16 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 19:54:11 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/02/03 16:00:47 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/02/26 15:06:10 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_sb_display(t_strbuilder *sb)
+char	*ft_sb_build(t_strbuilder *sb)
 {
 	char	*build;
 	int		index;
-	int		nb_display;
 	int		size;
 
 	size = ft_sb_size(sb);
@@ -24,7 +23,7 @@ int	ft_sb_display(t_strbuilder *sb)
 		return (0);
 	build = ft_calloc(size, sizeof(char) + 1);
 	if (!build)
-		return (-1);
+		return (NULL);
 	index = 0;
 	while (sb)
 	{
@@ -32,7 +31,18 @@ int	ft_sb_display(t_strbuilder *sb)
 		index += sb->index;
 		sb = sb->next;
 	}
-	nb_display = ft_putstrn_fd(build, index, 1);
+	return (build);
+}
+
+int	ft_sb_display(t_strbuilder *sb)
+{
+	char	*build;
+	int		nb_display;
+
+	build = ft_sb_build(sb);
+	if (!build)
+		return (-1);
+	nb_display = ft_putstr_fd(build, 1);
 	free(build);
 	return (nb_display);
 }
