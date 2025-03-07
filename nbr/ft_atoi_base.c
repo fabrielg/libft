@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 13:29:39 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/03/07 18:52:29 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/03/07 19:07:06 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,10 +71,10 @@ static int	get_index(char *str, char to_find, int size)
 
 int	ft_atoi_base(char *str, char *base)
 {
-	int	i;
-	int	result;
-	int	base_size;
-	int	sign;
+	size_t	i;
+	int		result;
+	int		base_size;
+	int		sign;
 
 	base_size = ft_strlen(base);
 	if (!is_base_string_correct(base, base_size))
