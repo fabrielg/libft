@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/02/11 20:14:31 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/03/07 18:53:05 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS = \
 	mem/ft_memcpy.c\
 	mem/ft_memmove.c\
 	mem/ft_memset.c\
+	nbr/ft_atoi_base.c\
 	nbr/ft_atoi.c\
 	nbr/ft_itoa.c\
 	nbr/ft_nb_digits.c\
