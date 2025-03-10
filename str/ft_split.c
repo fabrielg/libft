@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 09:51:08 by gfrancoi          #+#    #+#             */
-/*   Updated: 2024/11/22 00:01:57 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/03/10 16:16:57 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,12 @@ static int	word_len(char const *s, char c)
 	return (i);
 }
 
-static void	free_split(char **split)
+void	free_split(char **split)
 {
 	size_t	i;
 
+	if (!split)
+		return ;
 	i = 0;
 	while (split[i])
 		free(split[i++]);
