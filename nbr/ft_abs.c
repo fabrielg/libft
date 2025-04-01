@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nbr.h                                              :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/03/07 18:54:39 by gfrancoi         ###   ########.fr       */
+/*   Created: 2025/03/12 11:45:35 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/03/31 20:58:27 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NBR_H
-# define NBR_H
-
-int		ft_atoi_base(char *str, char *base);
-int		ft_atoi(const char *nptr);
-int		ft_atoi_strict(const char *nptr, int *dest);
-char	*ft_itoa(int n);
-int		ft_nb_digits(int n);
-long	ft_abs(int x);
-
-#endif
+long	ft_abs(int x)
+{
+	if (x < 0)
+		return (x * -1);
+	return (x);
+}
