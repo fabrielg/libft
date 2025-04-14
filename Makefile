@@ -44,6 +44,8 @@ SRCS = \
 	nbr/ft_atoi_base.c\
 	nbr/ft_atoi.c\
 	nbr/ft_itoa.c\
+	nbr/ft_max.c\
+	nbr/ft_min.c\
 	nbr/ft_nb_digits.c\
 	nbr/ft_abs.c\
 	printf/add_char.c\
