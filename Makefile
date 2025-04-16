@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/03/07 18:53:05 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/04/16 21:20:45 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRCS = \
 	str/ft_strmapi.c\
 	str/ft_strncmp.c\
 	str/ft_strnstr.c\
+	str/ft_strtol.c\
 	str/ft_strrchr.c\
 	str/ft_strtrim.c\
 	str/ft_substr.c\
