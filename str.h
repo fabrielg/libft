@@ -17,6 +17,7 @@
 
 void	free_split(char **split);
 char	**ft_split(char const *s, char c);
+size_t	ft_strarrlen(char **str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
