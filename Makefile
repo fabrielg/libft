@@ -37,6 +37,7 @@ SRCS = \
 	lst/ft_lstnb_find.c\
 	mem/ft_bzero.c\
 	mem/ft_calloc.c\
+	mem/free_map.c\
 	mem/ft_memchr.c\
 	mem/ft_memcmp.c\
 	mem/ft_memcpy.c\
