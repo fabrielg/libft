@@ -13,6 +13,7 @@
 #ifndef CHAR_H
 # define CHAR_H
 
+int	ft_has_char(const char *s, int c);
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);

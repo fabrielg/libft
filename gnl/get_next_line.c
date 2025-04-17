@@ -27,9 +27,9 @@ void	read_file(int fd, char **buffer)
 	int		nb_read;
 
 	if (!buffer_alloc(buffer))
-		return ((void)0);
-	if (ft_strrchr(*buffer, '\n') != NULL)
-		return ((void)0);
+		return ;
+	if (ft_has_char(*buffer, '\n') != -1)
+		return ;
 	content = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!content)
 		return ;
@@ -39,12 +39,12 @@ void	read_file(int fd, char **buffer)
 		content[nb_read] = 0;
 		if (nb_read <= 0)
 		{
-			if (ft_strlen_char(*buffer, 0) == 0)
+			if (ft_strlen(*buffer) == 0)
 				return (free(*buffer), *buffer = NULL, free(content));
 			break ;
 		}
 		gnl_strjoin(buffer, content);
-		if (nb_read < BUFFER_SIZE || gnl_strrchr(*buffer, '\n') != NULL)
+		if (nb_read < BUFFER_SIZE || ft_has_char(*buffer, '\n') != -1)
 			break ;
 	}
 	free(content);

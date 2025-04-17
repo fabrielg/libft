@@ -15,6 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 SRCS = \
+	char/ft_has_char.c\
 	char/ft_isalnum.c\
 	char/ft_isalpha.c\
 	char/ft_isascii.c\
