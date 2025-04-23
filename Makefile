@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/04/16 21:20:45 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/04/23 21:14:31 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,8 @@ SRCS = \
 	str/ft_strrchr.c\
 	str/ft_strtrim.c\
 	str/ft_substr.c\
+	str/ft_upper.c\
+	str/ft_lower.c\
 	strbuilder/ft_strbuilder_utils.c\
 	strbuilder/ft_strbuilder.c\
 	write/ft_putchar_fd.c\

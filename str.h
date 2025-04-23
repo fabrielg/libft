@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/04/16 21:20:22 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/04/23 21:14:12 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ long	ft_strtol(const char *str, char **endptr, int base);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	ft_upper(char *str);
+void	ft_lower(char *str);
 
 #endif
