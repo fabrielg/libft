@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/04/23 21:14:31 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/05/13 18:04:15 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,16 @@ SRCS = \
 	lst/ft_lstiter.c\
 	lst/ft_lstmap.c\
 	lst/ft_lstnb_find.c\
+	lst2/ft_lstnew2.c\
+	lst2/ft_lstadd_front2.c\
+	lst2/ft_lstsize2.c\
+	lst2/ft_lstlast2.c\
+	lst2/ft_lstadd_back2.c\
+	lst2/ft_lstdelone2.c\
+	lst2/ft_lstclear2.c\
+	lst2/ft_lstiter2.c\
+	lst2/ft_lstmap2.c\
+	lst2/ft_lstnb_find2.c\
 	mem/ft_bzero.c\
 	mem/ft_calloc.c\
 	mem/ft_free_map.c\

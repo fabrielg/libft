@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstsize2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/05/13 17:55:55 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 16:30:38 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/05/13 17:57:35 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+size_t	ft_lstsize2(t_list2 *lst)
+{
+	size_t	count;
+	t_list2	*node;
 
-# include "char.h"
-# include "color.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "lst2.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
-
-#endif
+	count = 0;
+	node = lst;
+	while (node)
+	{
+		node = node->next;
+		count++;
+	}
+	return (count);
+}

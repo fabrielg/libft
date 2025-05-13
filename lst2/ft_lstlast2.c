@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstlast2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/05/13 17:55:55 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 16:38:24 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/05/13 17:58:27 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+t_list2	*ft_lstlast2(t_list2 *lst)
+{
+	t_list2	*node;
 
-# include "char.h"
-# include "color.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "lst2.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
-
-#endif
+	node = lst;
+	if (node)
+	{
+		while (node->next)
+			node = node->next;
+	}
+	return (node);
+}

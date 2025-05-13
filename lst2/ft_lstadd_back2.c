@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstadd_back2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 15:41:14 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/05/13 17:55:55 by gfrancoi         ###   ########.fr       */
+/*   Created: 2024/11/18 17:42:03 by gfrancoi          #+#    #+#             */
+/*   Updated: 2025/05/13 18:00:08 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
+void	ft_lstadd_back2(t_list2 **lst, t_list2 *new)
+{
+	t_list2	*node;
 
-# include "char.h"
-# include "color.h"
-# include "gnl.h"
-# include "ft_printf.h"
-# include "lst.h"
-# include "lst2.h"
-# include "macro.h"
-# include "mem.h"
-# include "nbr.h"
-# include "str.h"
-# include "strbuilder.h"
-# include "write.h"
-
-#endif
+	if (lst)
+	{
+		if (!(*lst))
+			*lst = new;
+		else
+		{
+			node = ft_lstlast2(*(lst));
+			node->next = new;
+			new->prev = node;
+		}
+	}
+}
