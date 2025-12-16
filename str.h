@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 15:56:09 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/04/23 21:14:12 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/12/16 19:11:23 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 void	free_split(char **split);
 char	**ft_split(char const *s, char c);
+char	*ft_strarr_has_str(const char **arr, const char *str, size_t size);
 size_t	ft_strarrlen(char **str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);

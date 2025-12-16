@@ -6,7 +6,7 @@
 #    By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 20:19:05 by gfrancoi          #+#    #+#              #
-#    Updated: 2025/05/13 18:04:15 by gfrancoi         ###   ########.fr        #
+#    Updated: 2025/12/16 19:07:28 by gfrancoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRCS = \
 	printf/ft_printf.c\
 	printf/parsing.c\
 	str/ft_split.c\
+	str/ft_strarr_has_str.c\
 	str/ft_strarrlen.c\
 	str/ft_strchr.c\
 	str/ft_strdup.c\
