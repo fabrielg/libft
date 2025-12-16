@@ -6,7 +6,7 @@
 /*   By: gfrancoi <gfrancoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 01:46:25 by gfrancoi          #+#    #+#             */
-/*   Updated: 2025/05/07 11:12:53 by gfrancoi         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:45:22 by gfrancoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_free_map(void **map, int size)
 	if (!map)
 		return (0);
 	i = -1;
-	while (++i < size)
+	while (++i < size || (size < 0 && map[i]))
 		free(map[i]);
 	free(map);
 	return (1);
