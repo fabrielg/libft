@@ -17,7 +17,7 @@
 
 void	free_split(char **split);
 char	**ft_split(char const *s, char c);
-char	*ft_strarr_has_str(const char **arr, const char *str, size_t size);
+char	*ft_strarr_has_str(const char **arr, const char *str, int size);
 size_t	ft_strarrlen(char **str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);

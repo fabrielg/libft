@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-char	*ft_strarr_has_str(const char **arr, const char *str, size_t size)
+char	*ft_strarr_has_str(const char **arr, const char *str, int size)
 {
-	size_t	i;
+	int	i;
 
 	if (!arr || !(*arr))
 		return (0);
